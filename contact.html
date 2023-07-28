@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html >
+<head>
+    
+    <title>Tickets</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="contain">
+        <button class="btn">
+          <a href="./index.html" class="back">Back</a>
+        </button>
+      </div>
+      
+    <section class="container2">
+       
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Name">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Last Name">
+
+          <label for="Telephone Number">Telephone Number</label>
+          <input type="text" id="lname" name="Number" placeholder="Telephone Number">
+
+          <label for="Email">Email</label>
+          <input type="text" id="lname" name="Email" placeholder="Email">
+
+          <label for="Movie Name">Movie Name</label>
+          <input type="text" id="lname" name="Movie" placeholder="Movie Name">
+      
+          <label for="Ticket">Ticket Number</label>
+          <input type="text" id="lname" name="Ticket" placeholder="Ticket Number">
+        
+          <input type="submit" onclick="saveData()" value="Submit">
+          
+      
+
+       
+    </section>
+    <script>
+    function saveData() {
+        const firstname = document.getElementById("firstname").value;
+        const lastname = document.getElementById("lastname").value;
+        const telephonenumber = document.getElementById("telephonenumber").value;
+        const email = document.getElementById("email").value;
+        const moviename = document.getElementById("moviename").value;
+        const ticketnumber= document.getElementById("ticketnumber").value;
+        // Save data to localStorage
+        localStorage.setItem("firstname", firstname);
+        localStorage.setItem("lastname", lastname);
+        localStorage.setItem("telephonenumber", telephonenumber);
+        localStorage.setItem("email", email);
+        localStorage.setItem("moviename", moviename);
+        localStorage.setItem("ticketnumber", ticketnumber);
+      
+        alert("Data saved successfully!");
+      }
+      
+      </script>
+</body>
+</html>
